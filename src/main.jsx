@@ -4,11 +4,13 @@ import './index.css';
 import { App } from './pages/App.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { ThemeProvider } from './context/ThemeContext.jsx';
+import Error from './pages/Error.jsx';
 
 const router = createBrowserRouter([
  {
   path: '/',
   element: <App />,
+  errorElement: <Error />,
  },
 ]);
 
