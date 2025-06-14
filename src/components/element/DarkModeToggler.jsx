@@ -1,11 +1,10 @@
-import React from 'react';
 import { useDarkMode } from '@/context/ThemeContext';
 
 const DarkModeToggler = () => {
  const { darkMode, setDarkmode } = useDarkMode();
  return (
   <button onClick={() => setDarkmode(!darkMode)} className="flex flex-col justify-center ml-3 bg-third/50 rounded-full">
-   <label className="relative cursor-pointer p-2" for="light-switch">
+   <label className="relative cursor-pointer p-2" htmlFor="light-switch">
     <svg className="hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
      <path
       className="fill-yellow-300"
