@@ -14,12 +14,12 @@ import { Transition } from '@headlessui/react';
 import Logo from '@public/assets/images/logo.webp';
 import LanguageDropdown from '@/components/element/LanguageDropdown';
 import { useTranslation } from 'react-i18next';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useLocation } from 'react-router';
 
 const Header = () => {
  const [showProduct, setShowProduct] = useState(false);
  const [showNav, setShowNav] = useState(false);
-
+ const { pathname } = useLocation();
  const { t } = useTranslation();
 
  const movieFeatures = [
@@ -45,7 +45,7 @@ const Header = () => {
   },
  ];
 
- const isActive = location.pathname.startsWith('/movies');
+ const isActive = pathname.startsWith('/movies');
 
  return (
   <header className="relative z-50">

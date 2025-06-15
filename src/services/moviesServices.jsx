@@ -55,7 +55,7 @@ const movieService = {
    return response.data;
   } catch (error) {
    console.error(`Error fetching details for movie ID ${movieId}:`, error.message);
-   return <Error />;
+   return { error: true, message: `Error fetching cast for movie ID ${movieId}: ${error.message}` };
   }
  },
 
@@ -67,7 +67,7 @@ const movieService = {
    return response.data;
   } catch (error) {
    console.error(`Error fetching cast for movie ID ${movieId}:`, error.message);
-   return <Error />;
+   return { error: true, message: `Error fetching cast for movie ID ${movieId}: ${error.message}` };
   }
  },
 };

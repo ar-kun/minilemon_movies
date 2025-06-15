@@ -99,7 +99,7 @@ const MovieDetail = () => {
           </h3>
          </div>
         ))}
-        <div>
+        <div key="and-others">
          <div className="relative w-20 h-20 md:w-15 md:h-15 lg:w-20 lg:h-20  mx-auto mb-2">
           {/* Gambar */}
           <img
