@@ -30,10 +30,6 @@ export const App = () => {
   });
  }, []);
 
- //  console.log('firstMovie:', firstMovie);
- console.log('movie:', cast);
- console.log('crew:', crew);
-
  return (
   <GuestLayout backgroundImage={firstMovie.backdrop_path ? `https://image.tmdb.org/t/p/original${firstMovie.backdrop_path}` : null}>
    <div className="container mx-auto px-4 py-8 relative z-10 text-white">
@@ -164,12 +160,12 @@ export const App = () => {
      <div className="grid grid-cols-2 gap-x-6 gap-y-6">
       {movies.slice(1, 7).map((movie, index) => (
        <Link to={`/movies/${movie.id}`} key={movie.id} className={`rounded-lg overflow-hidden ${index % 2 !== 0 ? 'mt-12' : ''}`}>
-        <div class="relative group">
+        <div className="relative group">
          <div className="absolute inset-0 bg-slate-800/70 bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <Link to={`/movies/${movie.id}`} className="bg-third text-slate-800 hover:bg-third/90 font-medium py-2 px-2 rounded-lg">
+          <div className="bg-third text-slate-800 hover:bg-third/90 font-medium py-2 px-2 rounded-lg">
            <EyeIcon className="w-5 h-5 inline mr-2" />
            <span>Watch</span>
-          </Link>
+          </div>
          </div>
 
          <img
