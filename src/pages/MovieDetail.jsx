@@ -104,7 +104,7 @@ const MovieDetail = () => {
           {/* Gambar */}
           <img
            src={cast[8]?.profile_path ? `https://image.tmdb.org/t/p/w500${cast[8]?.profile_path}` : '/assets/images/no-image.png'}
-           alt=""
+           alt="and others"
            className="w-full h-full rounded-full object-cover"
           />
 
