@@ -63,7 +63,7 @@ const Header = () => {
       <div
        className={`md:flex space-x-6 ${
         showNav ? 'flex' : 'hidden'
-       } absolute md:static top-[10%] bg-white left-0 w-full md:bg-transparent p-4 md:p-0 z-10 justify-center md:justify-start shadow-sm dark:bg-gray-800 md:shadow-none border-b md:border-0 border-slate-200 lg:ms-10`}
+       } absolute md:static top-[10%] bg-white left-0 w-full md:bg-transparent p-4 md:p-0 z-10 justify-center md:justify-start shadow-sm dark:bg-gray-800 md:shadow-none border-b md:border-0 border-slate-200 lg:ms-5`}
       >
        <Link to={'/'} className="font-bold text-gray-800 dark:text-white hover:text-third dark:hover:text-indigo-400">
         {t('header.home', { defaultValue: 'Home' })}
