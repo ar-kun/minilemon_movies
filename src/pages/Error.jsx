@@ -3,14 +3,13 @@ import { Link, useRouteError } from 'react-router';
 
 const Error = () => {
  const error = useRouteError();
- console.error('Error:', error);
  return (
   <section className="bg-white dark:bg-gray-900 ">
    <div className="container min-h-screen px-6 py-12 mx-auto flex flex-col lg:flex-row lg:items-center lg:gap-12">
     <div className="w-full lg:w-1/2 order-2 lg:order-1">
      <p className="text-sm font-medium text-blue-500 dark:text-blue-400">{error.status} error</p>
      <h1 className="mt-3 text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">Page {error.statusText}</h1>
-     <p className="mt-4 text-gray-500 dark:text-gray-400">Sorry, {error.error.message}. Here are some helpful links:</p>
+     <p className="mt-4 text-gray-500 dark:text-gray-400">Sorry, {error?.error?.message}. Here are some helpful links:</p>
 
      <div className="flex items-center mt-6 gap-x-3">
       <Link

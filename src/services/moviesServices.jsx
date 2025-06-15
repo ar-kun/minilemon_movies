@@ -12,7 +12,7 @@ const axiosInstance = axios.create({
 });
 // id-ID en-US
 const movieService = {
- getMovies: async (page = 1, language = 'id-ID') => {
+ getMovies: async (page = 1, language = 'en-US') => {
   try {
    const response = await axiosInstance.get('/movie/popular', {
     params: {
@@ -22,8 +22,8 @@ const movieService = {
    });
    return response.data;
   } catch (error) {
-   console.error('Error fetching movies:', error);
-   throw error;
+   console.error('Error fetching popular movies:', error.message);
+   return { results: [], total_pages: 0 };
   }
  },
 
@@ -36,15 +36,14 @@ const movieService = {
     params: {
      query,
      include_adult: false,
-     language: 'id-ID',
+     language: 'en-US',
      page,
     },
    });
-   console.log('Search response:', response.data);
    return response.data;
   } catch (error) {
-   console.error('Error searching movies:', error);
-   throw error;
+   console.error('Error searching movies:', error.message);
+   return { results: [], total_pages: 0 };
   }
  },
 
@@ -55,8 +54,20 @@ const movieService = {
    });
    return response.data;
   } catch (error) {
-   console.error(`Error fetching movie ID ${movieId}:`, error);
-   throw error;
+   console.error(`Error fetching details for movie ID ${movieId}:`, error.message);
+   return { error: true, message: `Error fetching details for movie ID ${movieId}: ${error.message}` };
+  }
+ },
+
+ getMovieCast: async (movieId, language = 'en-US') => {
+  try {
+   const response = await axiosInstance.get(`/movie/${movieId}/credits`, {
+    params: { language },
+   });
+   return response.data;
+  } catch (error) {
+   console.error(`Error fetching cast for movie ID ${movieId}:`, error.message);
+   return { cast: [] };
   }
  },
 };
