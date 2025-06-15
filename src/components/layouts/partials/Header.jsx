@@ -12,6 +12,7 @@ import {
 } from '@heroicons/react/24/solid';
 import { Transition } from '@headlessui/react';
 import Logo from '@public/assets/images/logo.webp';
+import LanguageDropdown from '@/components/element/LanguageDropdown';
 
 const Header = () => {
  const [showProduct, setShowProduct] = useState(false);
@@ -117,6 +118,7 @@ const Header = () => {
 
      {/* Right - Login */}
      <div className="flex items-center space-x-4">
+      <LanguageDropdown />
       <DarkModeToggler />
       <div className="text-sm font-medium text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">Log in →</div>
      </div>

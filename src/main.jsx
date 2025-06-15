@@ -5,6 +5,7 @@ import { App } from './pages/App.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import Error from './pages/Error.jsx';
+import './i18n';
 
 const router = createBrowserRouter([
  {
