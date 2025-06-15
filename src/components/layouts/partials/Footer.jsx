@@ -12,7 +12,7 @@ const Footer = () => {
      <div className="md:col-span-2 col-span-2 lg:col-span-3">
       <div className="flex items-center space-x-4 mb-4">
        <img className="max-w-[100px] h-auto" src={Logo} alt="MiniLemon Movies Logo" />
-       <span className="text-2xl font-bold flex-coldark:text-white">Mini Movies</span>
+       <span className="text-2xl font-bold flex-col dark:text-white">Mini Movies</span>
       </div>
       <p className="text-justify">
        {t('footer.f_desc', {

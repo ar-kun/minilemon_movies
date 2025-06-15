@@ -40,7 +40,7 @@ const Error = () => {
     </div>
 
     <div className="relative w-full mt-12 lg:w-1/2 lg:mt-0 order-1 lg:order-2 flex justify-center">
-     <img className="w-full max-w-lg lg:mx-auto lg:max-w-xl" src={errorSvg} alt="Error Ilustration" />
+     <img className="w-full max-w-lg lg:mx-auto lg:max-w-xl" src={errorSvg} alt="Error Illustration" />
     </div>
    </div>
   </section>
