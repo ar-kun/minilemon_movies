@@ -21,7 +21,7 @@ const Header = () => {
 
  const { t } = useTranslation();
 
- const products = [
+ const movieFeatures = [
   {
    title: t('header.dropdown_movies.trending', { defaultValue: 'Trending' }),
    desc: t('header.dropdown_movies.trending_desc', { defaultValue: 'Discover the latest trending movies and TV shows.' }),
@@ -88,7 +88,7 @@ const Header = () => {
         >
          <div className="absolute left-0 mt-4 w-screen bg-white dark:bg-gray-800 shadow-lg dark:border-gray-700 rounded-lg z-50 p-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-           {products.map((item, idx) => (
+           {movieFeatures.map((item, idx) => (
             <div key={idx} className="hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-lg transition">
              <div className="flex items-center space-x-2 md:justify-center">
               {item.icon}
