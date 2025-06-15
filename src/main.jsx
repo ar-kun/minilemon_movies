@@ -8,6 +8,7 @@ import Error from './pages/Error.jsx';
 import './i18n';
 import Movie from './pages/Movie.jsx';
 import MovieDetail from './pages/MovieDetail.jsx';
+import About from './pages/About.jsx';
 
 const router = createBrowserRouter([
  {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
  {
   path: '/movies/:movieId',
   element: <MovieDetail />,
+  errorElement: <Error />,
+ },
+ {
+  path: '/about',
+  element: <About />,
   errorElement: <Error />,
  },
 ]);
