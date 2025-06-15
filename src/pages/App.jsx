@@ -118,11 +118,11 @@ export const App = () => {
         </ul>
        </div>
        <div className="md:mb-5 lg:mb-0">
-        <h2 className="text-base font-bold">Directur / Writer</h2>
+        <h2 className="text-base font-bold">Director / Writer</h2>
         {/* department Directing &  Writing*/}
         <ul className="list-none flex flex-wrap leading-0">
          {crew && crew.length > 0 ? (
-          <p>
+          <li>
            <span className="text-sm">Directors:</span>{' '}
            {crew
             .filter((member) => member.department === 'Directing')
@@ -133,7 +133,7 @@ export const App = () => {
               {index === array.length - 1 ? '.' : ', '}
              </span>
             ))}
-          </p>
+          </li>
          ) : (
           ''
          )}
