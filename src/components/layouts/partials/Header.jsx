@@ -23,23 +23,23 @@ const Header = () => {
 
  const products = [
   {
-   title: t('header.dropdown_movies.trending'),
-   desc: t('header.dropdown_movies.trending_desc'),
+   title: t('header.dropdown_movies.trending', { defaultValue: 'Trending' }),
+   desc: t('header.dropdown_movies.trending_desc', { defaultValue: 'Discover the latest trending movies and TV shows.' }),
    icon: <ArrowTrendingUpIcon className="w-7 h-7 text-indigo-600 dark:text-third" />,
   },
   {
-   title: t('header.dropdown_movies.popular'),
-   desc: t('header.dropdown_movies.popular_desc'),
+   title: t('header.dropdown_movies.popular', { defaultValue: 'Popular' }),
+   desc: t('header.dropdown_movies.popular_desc', { defaultValue: 'Explore the most popular movies and TV shows.' }),
    icon: <FireIcon className="w-7 h-7 text-indigo-600 dark:text-third" />,
   },
   {
-   title: t('header.dropdown_movies.recently'),
-   desc: t('header.dropdown_movies.recently_desc'),
+   title: t('header.dropdown_movies.recently', { defaultValue: 'Recently Added' }),
+   desc: t('header.dropdown_movies.recently_desc', { defaultValue: 'Find the newest additions to our collection.' }),
    icon: <PlusIcon className="w-7 h-7 text-indigo-600 dark:text-third" />,
   },
   {
-   title: t('header.dropdown_movies.upcoming'),
-   desc: t('header.dropdown_movies.upcoming_desc'),
+   title: t('header.dropdown_movies.upcoming', { defaultValue: 'Upcoming' }),
+   desc: t('header.dropdown_movies.upcoming_desc', { defaultValue: 'Get a sneak peek at upcoming releases.' }),
    icon: <ClockIcon className="w-7 h-7 text-indigo-600 dark:text-third" />,
   },
  ];
@@ -64,13 +64,15 @@ const Header = () => {
         showNav ? 'flex' : 'hidden'
        } absolute md:static top-[10%] bg-white left-0 w-full md:bg-transparent p-4 md:p-0 z-10 justify-center md:justify-start shadow-sm dark:bg-gray-800 md:shadow-none border-b md:border-0 border-slate-200 lg:ms-10`}
       >
-       <span className="font-bold text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">{t('header.home')}</span>
+       <span className="font-bold text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">
+        {t('header.home', { defaultValue: 'Home' })}
+       </span>
        <div className="">
         <button
          onClick={() => setShowProduct((prev) => !prev)}
          className="flex items-center font-bold text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400"
         >
-         {t('header.movies')}
+         {t('header.movies', { defaultValue: 'Movies' })}
          <ChevronDownIcon className="w-4 h-4 ml-1" />
         </button>
 
@@ -100,22 +102,26 @@ const Header = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 border-t mt-4 pt-4 dark:border-gray-700 text-center divide-y sm:divide-y-0 sm:divide-x dark:divide-gray-700">
            <button className="py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white">
             <EyeIcon className="w-6 h-6 inline-block mr-2 text-secondary dark:text-primary" />
-            <span>{t('header.dropdown_movies.last_watched')}</span>
+            <span>{t('header.dropdown_movies.last_watched', { defaultValue: 'Last Watched' })}</span>
            </button>
            <button className="py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white">
             <Square3Stack3DIcon className="w-6 h-6 inline-block mr-2 text-secondary dark:text-primary" />
-            <span>{t('header.dropdown_movies.see_all')}</span>
+            <span>{t('header.dropdown_movies.see_all', { defaultValue: 'See All Movies and TV Shows' })}</span>
            </button>
            <button className="py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white">
             <ArrowDownIcon className="w-6 h-6 inline-block mr-2 text-secondary dark:text-primary" />
-            <span>{t('header.dropdown_movies.download')}</span>
+            <span>{t('header.dropdown_movies.download', { defaultValue: 'Download' })}</span>
            </button>
           </div>
          </div>
         </Transition>
        </div>
-       <span className="font-bold text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">{t('header.blogs')}</span>
-       <span className="font-bold text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">{t('header.about')}</span>
+       <span className="font-bold text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">
+        {t('header.blogs', { defaultValue: 'Blogs' })}
+       </span>
+       <span className="font-bold text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">
+        {t('header.about', { defaultValue: 'About' })}
+       </span>
       </div>
      </div>
 
