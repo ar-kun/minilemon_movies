@@ -26,7 +26,7 @@ const Footer = () => {
       <ul className="space-y-2 text-sm text-gray-300 flex flex-col">
        <Link to="/">{t('header.home', { defaultValue: 'Home' })}</Link>
        <Link to="/">{t('header.movies', { defaultValue: 'Movies' })}</Link>
-       <Link to="/">{t('header.blogs', { defaultValue: 'Blogs' })}</Link>
+       <Link to="/">{t('header.cast', { defaultValue: 'Cast' })}</Link>
        <Link to="/">{t('header.about', { defaultValue: 'About Us' })}</Link>
       </ul>
      </div>

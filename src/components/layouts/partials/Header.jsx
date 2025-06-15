@@ -117,7 +117,7 @@ const Header = () => {
         </Transition>
        </div>
        <span className="font-bold text-gray-800 dark:text-white hover:text-third dark:hover:text-indigo-400">
-        {t('header.blogs', { defaultValue: 'Blogs' })}
+        {t('header.cast', { defaultValue: 'Cast' })}
        </span>
        <span className="font-bold text-gray-800 dark:text-white hover:text-third dark:hover:text-indigo-400">
         {t('header.about', { defaultValue: 'About' })}
