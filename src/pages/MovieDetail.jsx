@@ -66,7 +66,7 @@ const MovieDetail = () => {
         to={`/movies/${movie.id}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-third text-secondary hover:bg-third/70 font-semibold py-2 px-4 rounded-lg mt-4 inline-block"
+        className="bg-third text-secondary hover:bg-third/70 font-semibold py-2 px-4 rounded-lg mt-4 inline-block shadow-md shadow-third/50 hover:shadow-none transition-shadow duration-300"
        >
         Watch Now
        </Link>
@@ -75,7 +75,9 @@ const MovieDetail = () => {
         disabled={!movie.videos?.results?.length}
         onClick={() => window.open(`https://www.youtube.com/watch?v=${movie.videos?.results[0].key}`, '_blank')}
         className={`font-semibold py-2 px-4 rounded-lg mt-4 ${
-         movie.videos?.results?.length ? 'bg-third text-secondary hover:bg-third/70 cursor-pointer' : 'bg-gray-400 text-gray-600 cursor-not-allowed'
+         movie.videos?.results?.length
+          ? 'bg-third text-secondary hover:bg-third/70 cursor-pointer shadow-md shadow-third/50'
+          : 'bg-gray-400 text-gray-600 cursor-not-allowed'
         }`}
        >
         Watch Trailer
