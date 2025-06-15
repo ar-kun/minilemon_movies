@@ -3,6 +3,7 @@ import { Link, useRouteError } from 'react-router';
 
 const Error = () => {
  const error = useRouteError();
+ console.error('Error:', error);
  return (
   <section className="bg-white dark:bg-gray-900 ">
    <div className="container min-h-screen px-6 py-12 mx-auto flex flex-col lg:flex-row lg:items-center lg:gap-12">

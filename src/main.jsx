@@ -6,11 +6,17 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import Error from './pages/Error.jsx';
 import './i18n';
+import Movie from './pages/Movie.jsx';
 
 const router = createBrowserRouter([
  {
   path: '/',
   element: <App />,
+  errorElement: <Error />,
+ },
+ {
+  path: '/movie',
+  element: <Movie />,
   errorElement: <Error />,
  },
 ]);
