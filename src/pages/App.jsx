@@ -138,7 +138,7 @@ export const App = () => {
           ''
          )}
          {crew && crew.length > 0 ? (
-          <p>
+          <li>
            <span className="text-sm">Writers:</span>{' '}
            {crew
             .filter((member) => member.department === 'Writing' && ['Screenplay', 'Story', 'Writer'].includes(member.job))
@@ -149,7 +149,7 @@ export const App = () => {
               {index === array.length - 1 ? '.' : ', '}
              </span>
             ))}
-          </p>
+          </li>
          ) : (
           <li className="text-xs">No crew available</li>
          )}
