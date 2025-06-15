@@ -32,7 +32,6 @@ const About = () => {
   <GuestLayout>
    <section className="relative py-16">
     <div className="mx-auto max-w-7xl px-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-24 lg:px-8">
-     {/* Kiri - Teks */}
      <div>
       <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">We’re changing the way people connect</h2>
       <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -42,21 +41,17 @@ const About = () => {
       </p>
      </div>
 
-     {/* Kanan - Gambar Zigzag */}
      <div className="mt-10 lg:mt-0 grid grid-cols-3 gap-6">
-      {/* Kolom 1 */}
       <div className="space-y-6">
        <img src={image_1} alt="" className="rounded-xl shadow-lg" />
        <img src={image_1} alt="" className="rounded-xl shadow-lg" />
       </div>
 
-      {/* Kolom 2 */}
       <div className="space-y-6 pt-12">
        <img src={image_1} alt="" className="rounded-xl shadow-lg" />
        <img src={image_1} alt="" className="rounded-xl shadow-lg" />
       </div>
 
-      {/* Kolom 3 */}
       <div className="space-y-6">
        <img src={image_1} alt="" className="rounded-xl shadow-lg" />
        <img src={image_1} alt="" className="rounded-xl shadow-lg" />
@@ -66,10 +61,9 @@ const About = () => {
    </section>
    <section className="bg-white dark:bg-gray-900 py-16 px-6 lg:px-8">
     <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12">
-     {/* Kiri - Info Kontak */}
      <div className="col-span-2 lg:col-span-1">
       <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Get in touch</h2>
-      <p className="mt-4 text-gray-600 dark:text-gray-300">
+      <p className="mt-4 text-gray-600 dark:text-gray-300 text-justify">
        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam, mollitia nemo reprehenderit adipisci asperiores repellendus, quidem
        aliquid unde doloremque animi quos sed praesentium iusto.
       </p>
@@ -168,7 +162,7 @@ const About = () => {
    <section className="bg-gray-50 dark:bg-gray-900 py-16">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
      <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Meet our team</h2>
-     <p className="mt-4 text-lg leading-6 text-gray-600 dark:text-gray-300">
+     <p className="mt-4 text-lg leading-6 text-gray-600 dark:text-gray-300 ">
       We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.
      </p>
 
