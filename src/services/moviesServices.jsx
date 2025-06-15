@@ -40,7 +40,7 @@ const movieService = {
      page,
     },
    });
-   console.log('Search response:', response.data);
+   //  console.log('Search response:', response.data);
    return response.data;
   } catch (error) {
    console.error('Error searching movies:', error);
@@ -57,6 +57,19 @@ const movieService = {
    return response.data;
   } catch (error) {
    console.error(`Error fetching movie ID ${movieId}:`, error);
+   throw error;
+  }
+ },
+
+ getMovieCast: async (movieId, language = 'en-US') => {
+  try {
+   const response = await axiosInstance.get(`/movie/${movieId}/credits`, {
+    params: { language },
+   });
+   console.log(`Fetched cast for movie ID ${movieId}:`, response.data);
+   return response.data;
+  } catch (error) {
+   console.error(`Error fetching cast for movie ID ${movieId}:`, error);
    throw error;
   }
  },
