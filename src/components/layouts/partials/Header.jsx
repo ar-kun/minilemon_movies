@@ -46,7 +46,7 @@ const Header = () => {
  ];
 
  return (
-  <header>
+  <header className="relative z-50">
    <nav className="bg-white dark:bg-gray-800 shadow-sm px-4 sm:px-6 py-4">
     <div className="max-w-7xl mx-auto flex justify-between items-center">
      <div className="flex items-center space-x-8">

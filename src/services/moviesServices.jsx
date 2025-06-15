@@ -53,6 +53,7 @@ const movieService = {
    const response = await axiosInstance.get(`/movie/${movieId}`, {
     params: { language },
    });
+   console.log(`Fetched movie ID ${movieId}:`, response.data);
    return response.data;
   } catch (error) {
    console.error(`Error fetching movie ID ${movieId}:`, error);

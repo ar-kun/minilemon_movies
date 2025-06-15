@@ -7,6 +7,7 @@ import { ThemeProvider } from './context/ThemeContext.jsx';
 import Error from './pages/Error.jsx';
 import './i18n';
 import Movie from './pages/Movie.jsx';
+import MovieDetail from './pages/MovieDetail.jsx';
 
 const router = createBrowserRouter([
  {
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
  {
   path: '/movies',
   element: <Movie />,
+  errorElement: <Error />,
+ },
+ {
+  path: '/movies/:movieId',
+  element: <MovieDetail />,
   errorElement: <Error />,
  },
 ]);
