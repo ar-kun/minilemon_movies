@@ -1,12 +1,52 @@
-# React + Vite
+# Mini Lemon - Mini Movie
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MiniLemon Movies adalah situs web film dan acara TV yang menyediakan informasi tentang film dan acara TV terbaru. Kami berkomitmen untuk memberikan informasi yang akurat dan terkini kepada pengguna kami. Menggunakan API Public dari TMBD (Movies).
 
-Currently, two official plugins are available:
+## Langkah-langkah Instalasi
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Clone Repositori**
 
-## Expanding the ESLint configuration
+   ```bash
+   git clone https://github.com/ar-kun/minilemon_movies.git
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. **Pindah ke Direktori Proyek**
+
+   ```bash
+   cd minilemon_movies
+   ```
+
+3. **Instal Dependensi**
+
+   ```bash
+   npm install
+   ```
+
+4. **Salin Berkas Konfigurasi**
+
+   ```bash
+   cp .env.example .env
+   ```
+
+   Sesuaikan informasi konfigurasi database di dalam berkas `.env`.
+
+5. **Isi Key**
+
+   ```
+   VITE_TMDB_API_KEY=your_api_key_here
+   VITE_TMDB_BASE_URL=https://api.themoviedb.org/3
+   ```
+
+   Login ke website TMDB untuk mendapatkan key https://developer.themoviedb.org/reference/intro/authentication
+
+6. **Jalankan Server Lokal**
+
+   ```bash
+   npm run dev
+   ```
+
+## Note
+
+1. Untuk language (bahasa) belum di terapkan di semua page
+2. Sistem login belum di implentasi
+3. Console error karena frame google maps di page about
