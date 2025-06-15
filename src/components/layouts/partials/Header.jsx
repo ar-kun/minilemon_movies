@@ -14,6 +14,7 @@ import { Transition } from '@headlessui/react';
 import Logo from '@public/assets/images/logo.webp';
 import LanguageDropdown from '@/components/element/LanguageDropdown';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router';
 
 const Header = () => {
  const [showProduct, setShowProduct] = useState(false);
@@ -64,9 +65,9 @@ const Header = () => {
         showNav ? 'flex' : 'hidden'
        } absolute md:static top-[10%] bg-white left-0 w-full md:bg-transparent p-4 md:p-0 z-10 justify-center md:justify-start shadow-sm dark:bg-gray-800 md:shadow-none border-b md:border-0 border-slate-200 lg:ms-10`}
       >
-       <span className="font-bold text-gray-800 dark:text-white hover:text-third dark:hover:text-indigo-400">
+       <Link to={'/'} className="font-bold text-gray-800 dark:text-white hover:text-third dark:hover:text-indigo-400">
         {t('header.home', { defaultValue: 'Home' })}
-       </span>
+       </Link>
        <div className="">
         <button
          onClick={() => setShowProduct((prev) => !prev)}
@@ -89,13 +90,13 @@ const Header = () => {
          <div className="absolute left-0 mt-4 w-screen bg-white dark:bg-gray-800 shadow-lg dark:border-gray-700 rounded-lg z-50 p-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
            {movieFeatures.map((item, idx) => (
-            <div key={idx} className="hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-lg transition">
+            <Link to={'/movies'} key={idx} className="hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-lg transition">
              <div className="flex items-center space-x-2 md:justify-center">
               {item.icon}
               <div className="font-semibold text-gray-900 dark:text-white">{item.title}</div>
              </div>
              <div className="text-sm text-gray-600 dark:text-gray-300 mt-1 md:text-center">{item.desc}</div>
-            </div>
+            </Link>
            ))}
           </div>
 

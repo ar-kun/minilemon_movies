@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   errorElement: <Error />,
  },
  {
-  path: '/movie',
+  path: '/movies',
   element: <Movie />,
   errorElement: <Error />,
  },
