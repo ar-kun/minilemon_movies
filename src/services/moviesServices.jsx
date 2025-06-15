@@ -12,7 +12,7 @@ const axiosInstance = axios.create({
 });
 // id-ID en-US
 const movieService = {
- getMovies: async (page = 1, language = 'id-ID') => {
+ getMovies: async (page = 1, language = 'en-US') => {
   try {
    const response = await axiosInstance.get('/movie/popular', {
     params: {
@@ -36,11 +36,10 @@ const movieService = {
     params: {
      query,
      include_adult: false,
-     language: 'id-ID',
+     language: 'en-US',
      page,
     },
    });
-   //  console.log('Search response:', response.data);
    return response.data;
   } catch (error) {
    console.error('Error searching movies:', error);
@@ -53,7 +52,6 @@ const movieService = {
    const response = await axiosInstance.get(`/movie/${movieId}`, {
     params: { language },
    });
-   console.log(`Fetched movie ID ${movieId}:`, response.data);
    return response.data;
   } catch (error) {
    console.error(`Error fetching movie ID ${movieId}:`, error);
@@ -66,7 +64,6 @@ const movieService = {
    const response = await axiosInstance.get(`/movie/${movieId}/credits`, {
     params: { language },
    });
-   console.log(`Fetched cast for movie ID ${movieId}:`, response.data);
    return response.data;
   } catch (error) {
    console.error(`Error fetching cast for movie ID ${movieId}:`, error);

@@ -14,7 +14,7 @@ import { Transition } from '@headlessui/react';
 import Logo from '@public/assets/images/logo.webp';
 import LanguageDropdown from '@/components/element/LanguageDropdown';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const Header = () => {
  const [showProduct, setShowProduct] = useState(false);
@@ -45,6 +45,8 @@ const Header = () => {
   },
  ];
 
+ const isActive = location.pathname.startsWith('/movies');
+
  return (
   <header className="relative z-50">
    <nav className="bg-white dark:bg-gray-800 shadow-sm px-4 sm:px-6 py-4">
@@ -65,13 +67,22 @@ const Header = () => {
         showNav ? 'flex' : 'hidden'
        } absolute md:static top-[10%] bg-white left-0 w-full md:bg-transparent p-4 md:p-0 z-10 justify-center md:justify-start shadow-sm dark:bg-gray-800 md:shadow-none border-b md:border-0 border-slate-200 lg:ms-5`}
       >
-       <Link to={'/'} className="font-bold text-gray-800 dark:text-white hover:text-third dark:hover:text-indigo-400">
+       <NavLink
+        to={'/'}
+        className={({ isActive }) =>
+         `font-bold text-gray-800 dark:text-white hover:text-third dark:hover:text-indigo-400 ${
+          isActive ? 'border-b-2 border-third pb-1' : 'border-b-0 pb-0'
+         }`
+        }
+       >
         {t('header.home', { defaultValue: 'Home' })}
-       </Link>
+       </NavLink>
        <div className="">
         <button
          onClick={() => setShowProduct((prev) => !prev)}
-         className="flex items-center font-bold text-gray-800 dark:text-white hover:text-third dark:hover:text-indigo-400"
+         className={`flex items-center font-bold hover:text-third dark:hover:text-indigo-400 ${
+          isActive ? 'border-b-2 border-third pb-1' : 'text-gray-800 dark:text-white'
+         }`}
         >
          {t('header.movies', { defaultValue: 'Movies' })}
          <ChevronDownIcon className="w-4 h-4 ml-1" />
@@ -117,12 +128,26 @@ const Header = () => {
          </div>
         </Transition>
        </div>
-       <span className="font-bold text-gray-800 dark:text-white hover:text-third dark:hover:text-indigo-400">
+       <NavLink
+        className={({ isActive }) =>
+         `font-bold text-gray-800 dark:text-white hover:text-third dark:hover:text-indigo-400 ${
+          isActive ? 'border-b-2 border-third pb-1' : 'border-b-0 pb-0'
+         }`
+        }
+        to={'/cast'}
+       >
         {t('header.cast', { defaultValue: 'Cast' })}
-       </span>
-       <span className="font-bold text-gray-800 dark:text-white hover:text-third dark:hover:text-indigo-400">
+       </NavLink>
+       <NavLink
+        className={({ isActive }) =>
+         `font-bold text-gray-800 dark:text-white hover:text-third dark:hover:text-indigo-400 ${
+          isActive ? 'border-b-2 border-third pb-1' : 'border-b-0 pb-0'
+         }`
+        }
+        to={'/about'}
+       >
         {t('header.about', { defaultValue: 'About' })}
-       </span>
+       </NavLink>
       </div>
      </div>
 
