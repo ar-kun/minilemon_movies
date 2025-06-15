@@ -1,0 +1,34 @@
+{
+ "welcome": "Welcome to our website",
+ "header": {
+  "home": "Home",
+  "movies": "Movies",
+  "blogs": "Blogs",
+  "about": "About",
+  "dropdown_movies": {
+   "trending": "Trending",
+   "trending_desc": "Discover the latest trending movies and TV shows.",
+   "popular": "Popular",
+   "popular_desc": "Explore the most popular movies and TV shows.",
+   "recently": "Recently Added",
+   "recently_desc": "Find the newest additions to our collection.",
+   "upcoming": "Upcoming",
+   "upcoming_desc": "Get a sneak peek at upcoming releases.",
+   "last_watched": "Last Watched",
+   "see_all": "See All Movies and TV Shows",
+   "download": "Download"
+  }
+ },
+ "footer": {
+  "f_desc": "MiniLemon Movies is a movie and TV show website that provides information about the latest movies and TV shows. We are committed to providing accurate and up-to-date information to our users.",
+  "navigation": "Navigation",
+  "legal": "Legal",
+  "privacy_policy": "Privacy Policy",
+  "terms_of_service": "Terms of Service",
+  "subscribe": "Subscribe",
+  "subscribe_title": "Subscribe to our Newsletter",
+  "subscribe_desc": "Stay updated with the latest news and updates from MiniLemon Movies.",
+  "subscribe_placeholder": "Enter your email address",
+  "copyright": "Inc. All rights reserved."
+ }
+}
