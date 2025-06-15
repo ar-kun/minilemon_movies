@@ -13,30 +13,33 @@ import {
 import { Transition } from '@headlessui/react';
 import Logo from '@public/assets/images/logo.webp';
 import LanguageDropdown from '@/components/element/LanguageDropdown';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
  const [showProduct, setShowProduct] = useState(false);
  const [showNav, setShowNav] = useState(false);
 
+ const { t } = useTranslation();
+
  const products = [
   {
-   title: 'Tranding',
-   desc: 'Discover the latest trending movies and TV shows',
+   title: t('header.dropdown_movies.trending'),
+   desc: t('header.dropdown_movies.trending_desc'),
    icon: <ArrowTrendingUpIcon className="w-7 h-7 text-indigo-600 dark:text-third" />,
   },
   {
-   title: 'Popular',
-   desc: 'Explore the most popular movies and TV shows',
+   title: t('header.dropdown_movies.popular'),
+   desc: t('header.dropdown_movies.popular_desc'),
    icon: <FireIcon className="w-7 h-7 text-indigo-600 dark:text-third" />,
   },
   {
-   title: 'Recently Added',
-   desc: 'Find the newest additions to our collection',
+   title: t('header.dropdown_movies.recently'),
+   desc: t('header.dropdown_movies.recently_desc'),
    icon: <PlusIcon className="w-7 h-7 text-indigo-600 dark:text-third" />,
   },
   {
-   title: 'Coming Soon',
-   desc: 'Get a sneak peek at upcoming releases',
+   title: t('header.dropdown_movies.upcoming'),
+   desc: t('header.dropdown_movies.upcoming_desc'),
    icon: <ClockIcon className="w-7 h-7 text-indigo-600 dark:text-third" />,
   },
  ];
@@ -61,13 +64,13 @@ const Header = () => {
         showNav ? 'flex' : 'hidden'
        } absolute md:static top-[10%] bg-white left-0 w-full md:bg-transparent p-4 md:p-0 z-10 justify-center md:justify-start shadow-sm dark:bg-gray-800 md:shadow-none border-b md:border-0 border-slate-200 lg:ms-10`}
       >
-       <span className="font-bold text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">Home</span>
+       <span className="font-bold text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">{t('header.home')}</span>
        <div className="">
         <button
          onClick={() => setShowProduct((prev) => !prev)}
          className="flex items-center font-bold text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400"
         >
-         Movies
+         {t('header.movies')}
          <ChevronDownIcon className="w-4 h-4 ml-1" />
         </button>
 
@@ -97,22 +100,22 @@ const Header = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 border-t mt-4 pt-4 dark:border-gray-700 text-center divide-y sm:divide-y-0 sm:divide-x dark:divide-gray-700">
            <button className="py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white">
             <EyeIcon className="w-6 h-6 inline-block mr-2 text-secondary dark:text-primary" />
-            <span>Last watched</span>
+            <span>{t('header.dropdown_movies.last_watched')}</span>
            </button>
            <button className="py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white">
             <Square3Stack3DIcon className="w-6 h-6 inline-block mr-2 text-secondary dark:text-primary" />
-            <span>View All Movies</span>
+            <span>{t('header.dropdown_movies.see_all')}</span>
            </button>
            <button className="py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white">
             <ArrowDownIcon className="w-6 h-6 inline-block mr-2 text-secondary dark:text-primary" />
-            <span>Download</span>
+            <span>{t('header.dropdown_movies.download')}</span>
            </button>
           </div>
          </div>
         </Transition>
        </div>
-       <span className="font-bold text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">Blogs</span>
-       <span className="font-bold text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">About</span>
+       <span className="font-bold text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">{t('header.blogs')}</span>
+       <span className="font-bold text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">{t('header.about')}</span>
       </div>
      </div>
 

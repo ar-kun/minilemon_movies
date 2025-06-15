@@ -1,3 +1,22 @@
 {
- "welcome": "Selamat datang di website kami"
+ "welcome": "Selamat datang di website kami",
+ "header": {
+  "home": "Beranda",
+  "movies": "Film",
+  "blogs": "Blog",
+  "about": "Tentang",
+  "dropdown_movies": {
+   "trending": "Sedang Tren",
+   "trending_desc": "Temukan film dan acara TV terbaru yang sedang trending.",
+   "popular": "Populer",
+   "popular_desc": "Jelajahi film dan acara TV paling populer.",
+   "recently": "Baru Ditambahkan",
+   "recently_desc": "Temukan penambahan terbaru dalam koleksi kami.",
+   "upcoming": "Yang Akan Datang",
+   "upcoming_desc": "Dapatkan bocoran tentang rilis yang akan datang.",
+   "last_watched": "Terakhir Ditonton",
+   "see_all": "Lihat Semua Film dan Acara TV",
+   "download": "Unduhan Anda"
+  }
+ }
 }

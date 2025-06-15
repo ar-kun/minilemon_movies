@@ -1,3 +1,22 @@
 {
- "welcome": "Welcome to our website"
+ "welcome": "Welcome to our website",
+ "header": {
+  "home": "Home",
+  "movies": "Movies",
+  "blogs": "Blogs",
+  "about": "About",
+  "dropdown_movies": {
+   "trending": "Trending",
+   "trending_desc": "Discover the latest trending movies and TV shows.",
+   "popular": "Popular",
+   "popular_desc": "Explore the most popular movies and TV shows.",
+   "recently": "Recently Added",
+   "recently_desc": "Find the newest additions to our collection.",
+   "upcoming": "Upcoming",
+   "upcoming_desc": "Get a sneak peek at upcoming releases.",
+   "last_watched": "Last Watched",
+   "see_all": "See All Movies and TV Shows",
+   "download": "Download"
+  }
+ }
 }
