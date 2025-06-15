@@ -18,5 +18,17 @@
    "see_all": "Lihat Semua Film dan Acara TV",
    "download": "Unduhan Anda"
   }
+ },
+ "footer": {
+  "f_desc": "MiniLemon Movies adalah situs web film dan acara TV yang menyediakan informasi tentang film dan acara TV terbaru. Kami berkomitmen untuk memberikan informasi yang akurat dan terkini kepada pengguna kami.",
+  "navigation": "Navigasi",
+  "legal": "Hukum",
+  "privacy_policy": "Kebijakan Privasi",
+  "terms_of_service": "Syarat Layanan",
+  "subscribe": "Berlangganan",
+  "subscribe_title": "Berlangganan Buletin Kami",
+  "subscribe_desc": "Tetap terupdate dengan berita dan pembaruan terbaru dari MiniLemon Movies.",
+  "subscribe_placeholder": "Masukkan alamat email Anda",
+  "copyright": "Inc. Hak cipta dilindungi undang-undang."
  }
 }

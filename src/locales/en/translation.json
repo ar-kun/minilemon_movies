@@ -18,5 +18,17 @@
    "see_all": "See All Movies and TV Shows",
    "download": "Download"
   }
+ },
+ "footer": {
+  "f_desc": "MiniLemon Movies is a movie and TV show website that provides information about the latest movies and TV shows. We are committed to providing accurate and up-to-date information to our users.",
+  "navigation": "Navigation",
+  "legal": "Legal",
+  "privacy_policy": "Privacy Policy",
+  "terms_of_service": "Terms of Service",
+  "subscribe": "Subscribe",
+  "subscribe_title": "Subscribe to our Newsletter",
+  "subscribe_desc": "Stay updated with the latest news and updates from MiniLemon Movies.",
+  "subscribe_placeholder": "Enter your email address",
+  "copyright": "Inc. All rights reserved."
  }
 }
