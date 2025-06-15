@@ -83,41 +83,61 @@ const About = () => {
      <form className="space-y-6 col-span-2 lg:col-span-1">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
        <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">First name</label>
+        <label htmlFor="first-name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+         First name
+        </label>
         <input
          type="text"
+         id="first-name"
+         name="first-name"
          className="mt-1 block w-full rounded-md border-2 border-third/80 dark:border-gray-700 dark:bg-gray-800 dark:text-white shadow-sm focus:ring-third focus:border-third sm:text-sm p-2"
         />
        </div>
        <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Last name</label>
+        <label htmlFor="last-name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+         Last name
+        </label>
         <input
          type="text"
+         id="last-name"
+         name="last-name"
          className="mt-1 block w-full rounded-md border-2 border-third/80 dark:border-gray-700 dark:bg-gray-800 dark:text-white shadow-sm focus:ring-third focus:border-third sm:text-sm p-2"
         />
        </div>
       </div>
 
       <div>
-       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+       <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+        Email
+       </label>
        <input
         type="email"
+        id="email"
+        name="email"
         className="mt-1 block w-full rounded-md border-2 border-third/80 dark:border-gray-700 dark:bg-gray-800 dark:text-white shadow-sm focus:ring-third focus:border-third sm:text-sm p-2"
        />
       </div>
 
       <div>
-       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Phone number</label>
+       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+        Phone number
+       </label>
        <input
         type="tel"
+        id="phone"
+        name="phone"
         className="mt-1 block w-full rounded-md border-2 border-third/80 dark:border-gray-700 dark:bg-gray-800 dark:text-white shadow-sm focus:ring-third focus:border-third sm:text-sm p-2"
        />
       </div>
 
       <div>
-       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+       <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+        Message
+       </label>
        <textarea
         rows="4"
+        id="message"
+        name="message"
         className="mt-1 block w-full rounded-md border-2 border-third/80 dark:border-gray-700 dark:bg-gray-800 dark:text-white shadow-sm focus:ring-third focus:border-third sm:text-sm p-2"
        ></textarea>
       </div>
