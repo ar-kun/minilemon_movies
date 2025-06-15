@@ -43,18 +43,18 @@ const About = () => {
 
      <div className="mt-10 lg:mt-0 grid grid-cols-3 gap-6">
       <div className="space-y-6">
-       <img src={image_1} alt="" className="rounded-xl shadow-lg" />
-       <img src={image_1} alt="" className="rounded-xl shadow-lg" />
+       <img src={image_1} alt="Illustration representing connection and collaboration" className="rounded-xl shadow-lg" />
+       <img src={image_1} alt="Illustration representing connection and collaboration" className="rounded-xl shadow-lg" />
       </div>
 
       <div className="space-y-6 pt-12">
-       <img src={image_1} alt="" className="rounded-xl shadow-lg" />
-       <img src={image_1} alt="" className="rounded-xl shadow-lg" />
+       <img src={image_1} alt="Illustration representing connection and collaboration" className="rounded-xl shadow-lg" />
+       <img src={image_1} alt="Illustration representing connection and collaboration" className="rounded-xl shadow-lg" />
       </div>
 
       <div className="space-y-6">
-       <img src={image_1} alt="" className="rounded-xl shadow-lg" />
-       <img src={image_1} alt="" className="rounded-xl shadow-lg" />
+       <img src={image_1} alt="Illustration representing connection and collaboration" className="rounded-xl shadow-lg" />
+       <img src={image_1} alt="Illustration representing connection and collaboration" className="rounded-xl shadow-lg" />
       </div>
      </div>
     </div>
