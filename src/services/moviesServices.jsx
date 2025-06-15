@@ -22,8 +22,8 @@ const movieService = {
    });
    return response.data;
   } catch (error) {
-   console.error('Error fetching movies:', error);
-   throw error;
+   console.error('Error fetching popular movies:', error.message);
+   return { results: [], total_pages: 0 };
   }
  },
 
@@ -42,8 +42,8 @@ const movieService = {
    });
    return response.data;
   } catch (error) {
-   console.error('Error searching movies:', error);
-   throw error;
+   console.error('Error searching movies:', error.message);
+   return { results: [], total_pages: 0 };
   }
  },
 
@@ -54,8 +54,8 @@ const movieService = {
    });
    return response.data;
   } catch (error) {
-   console.error(`Error fetching movie ID ${movieId}:`, error);
-   throw error;
+   console.error(`Error fetching details for movie ID ${movieId}:`, error.message);
+   return <Error />;
   }
  },
 
@@ -66,8 +66,8 @@ const movieService = {
    });
    return response.data;
   } catch (error) {
-   console.error(`Error fetching cast for movie ID ${movieId}:`, error);
-   throw error;
+   console.error(`Error fetching cast for movie ID ${movieId}:`, error.message);
+   return <Error />;
   }
  },
 };
